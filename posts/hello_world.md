@@ -12,7 +12,3 @@ For fun, let's also add a little codeblock
 def hello_world():
     print("Hi!")
 ```
-
-### Part 2, the image
-And here's an image.
-![My profile pic](/static/images/nyarcana.jpeg)
