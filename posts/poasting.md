@@ -1,6 +1,6 @@
 title: I should really just post
 description: Watch out I'm gonna poast
-date: 2025-07-10
+date: 2025-07-10 19:00
 
 *Listening to Koi by Gen Hoshino*
 
@@ -41,6 +41,6 @@ I also have my own discord sever, but it's private and you're not invited. I'm s
 JK it's totally you
 
 
-![smug](static/css/smug1.webp)
+![smug](/static/images/smug1.webp)
 
 Bye

@@ -1,6 +1,6 @@
 title: Hello World!
 description: The first post of my new blog
-date: 2025-06-13
+date: 2025-06-13 19:00
 
 # Hello World!
 This is a test post, and a hello!

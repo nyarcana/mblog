@@ -1,6 +1,7 @@
 import markdown
 import os
 import shutil
+from datetime import datetime
 
 POST_DIR = "posts/"
 
@@ -29,6 +30,9 @@ class Post:
         self.html = html
         self.card_html = card_html
 
+        
+        self.date = datetime.strptime(metadata["date"][0], "%Y-%m-%d %H:%M")
+
 def main():
     build_dir = "build"
     if os.path.exists(build_dir):
@@ -49,11 +53,15 @@ def main():
         card_html = fill_template(templates["post_panel.html"], {"post_title": metadata["title"][0], "post_description": metadata["description"][0], "post_date": metadata["date"][0], "post_link": f"/posts/{html_name}"})
         post = Post(html_name, metadata, html, card_html)
         posts.append(post)
+    
+    # Sort by the date
+    posts.sort(key=lambda p: p.date, reverse=True)
 
     post_panels_html = ""
     for post in posts:
         post_panels_html += post.card_html
         post_panels_html += "\n"
+    
     # Create index
     with open(f"{build_dir}/index.html", "w") as f:
         contents = fill_template(templates["index.html"], {"header": templates["header.html"], "footer": templates["footer.html"], "head": templates["head.html"], "posts": post_panels_html})

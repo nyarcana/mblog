@@ -3,7 +3,7 @@ import os
 
 import http.server
 
-PORT = 8001
+PORT = 8000
 DIRECTORY = "./build"
 
 os.chdir(DIRECTORY)
